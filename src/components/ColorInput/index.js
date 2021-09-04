@@ -12,7 +12,7 @@ const ColorInput = ({
   urlProp,
 }) => {
   const [state, setState] = useState(defaultVal);
-  const [stateC, setStateC] = useState("#000");
+  const [stateC, setStateC] = useState("");
   const [check, setCheck] = useState(defaultVal);
   const [checkC, setCheckC] = useState(defaultVal);
   const initial = useRef(true);
@@ -75,6 +75,7 @@ const ColorInput = ({
         <Input
           type="text"
           placeholder={placeHolder}
+          onClick={(e) => setState("")}
           onChange={(e) => setState(e.currentTarget.value)}
           value={state}
           list={`${label.replace(" ", "-")}dataList`}
