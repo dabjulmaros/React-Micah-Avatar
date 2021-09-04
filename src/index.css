@@ -22,6 +22,18 @@ hr {
   width: 100%;
 }
 
+@media only screen and (max-width: 950px) {
+  body {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  #root div.footer {
+    position: relative;
+  }
+}
+
 ::-webkit-scrollbar {
   background-color: #fff;
   width: 2px;

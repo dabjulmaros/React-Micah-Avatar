@@ -2,7 +2,7 @@ import React from "react";
 import { Wrapper, Content } from "./Footer.style";
 
 const Footer = () => (
-  <Wrapper>
+  <Wrapper className="footer">
     <Content>
       <span>
         {`Made possible thanks to: `}

@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% - 1rem);
   background: var(--darkBack);
   color: var(--textColor);
   padding: 0.5rem;
