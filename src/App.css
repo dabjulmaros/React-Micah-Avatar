@@ -1,0 +1,13 @@
+#root {
+  display: flex;
+  align-content: space-around;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media only screen and (max-width: 950px) {
+  #root {
+    display: inline-block;
+  }
+}
