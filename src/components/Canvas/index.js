@@ -13,7 +13,7 @@ const Canvas = ({ url }) => {
       initial.current = false;
       return;
     }
-    loadImage("/assets/loading.svg");
+    loadImage("./assets/loading.svg");
     setState(url);
   }, [url, state, setState]);
 
