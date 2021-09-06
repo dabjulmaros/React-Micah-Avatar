@@ -11,8 +11,10 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
   display: flex;
   padding-left: 2rem;
+  align-items: end;
   .color {
     width: 2rem;
+    height: 2.8rem;
   }
 `;
 
