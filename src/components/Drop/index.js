@@ -42,11 +42,7 @@ const Drop = ({ label, dropArr, setValue, useTimer, urlProp }) => {
       <Content>
         <Input
           onChange={(e) => setDrop(e.currentTarget.value)}
-          defaultValue={{
-            label: "Select One",
-          }}
         >
-          <option hidden>{"Select One"}</option>
           {dropArr.map((style) => (
             <option value={style} key={style}>
               {style}

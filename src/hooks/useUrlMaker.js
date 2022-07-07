@@ -20,7 +20,7 @@ export const useUrlMaker = () => {
 
   useEffect(() => {
     setUrl(
-      `https://avatars.dicebear.com/api/micah/${seed}.svg?&${backRad}${margin}${BC}${SC}${earrings}${eyebrows}${ears}${eyes}${beard}${glasses}${mouth}${nose}${shirt}${hair}`
+      `https://avatars.dicebear.com/api/micah/${seed}.svg?${backRad}${margin}${BC}${SC}${earrings}${eyebrows}${ears}${eyes}${beard}${glasses}${mouth}${nose}${shirt}${hair}`
     );
   }, [
     seed,

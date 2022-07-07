@@ -39,12 +39,27 @@ const Canvas = ({ url }) => {
     const context = canvas.getContext("2d");
     context.clearRect(0, 0, canvas.width, canvas.height);
 
-    var img = new Image();
-    img.onload = function () {
-      context.drawImage(img, 0, 0);
-    };
+    fetch(imageUrl).then(resp=>resp.text()).then(text=>{
+      let parser = new DOMParser();
+      let document = parser.parseFromString(text,'text/xml');
+      
+      //base 64 econding and dimmesion attributes needed for firefox
+      let svg = document.querySelector('svg');
+      console.log(svg)
+      svg.setAttribute('width', '400px');
+      svg.setAttribute('height','400px');
 
-    img.src = imageUrl;
+      let base64 = 'data:image/svg+xml;base64,' + btoa(new XMLSerializer().serializeToString(svg));
+      
+      let img = new Image();
+
+      img.onload = function () {
+        context.drawImage(img, 0, 0);
+      }
+      img.src = base64;
+
+    });
+    
   }
 };
 
